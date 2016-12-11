@@ -4,6 +4,7 @@ var url = require('url');
 var path = require("path");
 var app = express();
 
+var port = process.env.PORT || 3000;
 var intRegex = /^\d+$/;
 var dateRegex = /^\bJanuary\b|\bFebruary\b|\bMarch\b|\bApril\b|\bMay\b|\bJune\b|\bJuly\b|\bAugust\b|\bSeptember\b|\bOctober\b|\bNovember\b|\bDecember\b \d{2}, \d{4}$/;
 var output = {};
@@ -50,4 +51,4 @@ app.use("/", function(req, res){
     } 
 })
 
-http.createServer(app).listen(8080);
+http.createServer(app).listen(port);
